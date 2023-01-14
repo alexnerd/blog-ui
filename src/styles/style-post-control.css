@@ -1,0 +1,29 @@
+section.post-control {
+    margin-top: 40px;
+}
+
+section.control-read-more {
+    float: left;
+    margin-right: 14px;
+}
+
+a.read-more-link {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    height: 38px;
+    padding: 0 22px;
+    line-height: 38px;
+
+    display: inline-block;
+    border-radius: 30px;
+
+    border: 1px solid #f47e00;
+    transition: all 0.1s ease-in;                    
+}
+
+a.read-more-link:hover {
+    color: white;   
+    background-color:  #f47e00;                                 
+}

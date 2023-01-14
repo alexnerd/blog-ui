@@ -1,0 +1,17 @@
+header {
+    margin-bottom: 40px;
+}
+header > a {
+    text-decoration: none;
+    font-family: 'Podkova', serif;
+    font-weight: bold;
+    color: #222;
+    font-size: 44px;
+}
+
+header > span {
+    font-family: 'Podkova', serif;
+    color: #f47e00;
+    font-weight: bold;
+    font-size: 44px;
+}

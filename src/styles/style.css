@@ -1,0 +1,59 @@
+@font-face { font-family: podkova; 
+    src: url('../fonts/Podkova-VariableFont_wght.ttf'); } 
+@font-face { font-family: rokkitt; 
+    src: url('../fonts/Rokkitt-VariableFont_wght.ttf'); } 
+@font-face { font-family: lora; 
+    src: url('../fonts/Lora-VariableFont_wght.ttf'); }     
+
+body {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 0px;
+    word-break: break-word;
+}
+
+main {
+    -webkit-font-smoothing: antialiased;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 8fr 0.5fr;
+    grid-template-columns: 4fr 1.5fr;
+    grid-template-areas: 
+    "header header"
+    "article nav"
+    "footer footer"
+}
+
+header {
+    grid-area: header;
+    background: white;
+    margin-top:20px; 
+}
+
+nav {
+    grid-area: nav;
+    background: white;
+    margin-left: 12%;
+    margin-top: 32px;
+    
+}
+
+article {
+    grid-area: article;
+}
+
+footer {
+    grid-area: footer;
+    background: white;
+    border-top: 2px solid #efefef;
+    margin-top: 15px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #878282;
+}
+
+icon-view {
+    grid-area: icon-view;
+    background: white;
+}

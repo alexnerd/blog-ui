@@ -1,0 +1,102 @@
+div.blog-post {
+    margin-bottom: 35px;
+    border-bottom: 1px dotted #ddd;
+    padding-bottom: 40px;
+    font-family: 'Lora', serif;
+}
+
+h2.post-header {
+    font-family: 'Rokkitt', serif;
+    font-size: 27px;
+    letter-spacing: 0.8px;
+    line-height: 35px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+h2.post-header > a {
+    text-decoration: none;
+    background-color: transparent;
+    color: #000;
+}
+
+section.meta_data > span {
+    line-height: 26px;
+    word-break: break-word;
+    margin-right: 18px;
+    color: #666;
+    font-size: 12px;
+}
+
+section.content {
+    margin-top: 24px;
+}
+
+section.content > p, 
+section.content > ul,
+section.content > ol {
+    color: #333;
+    font-size: 15px;
+    line-height: 26px;
+    word-break: break-word;
+
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+section.content > p > a, 
+section.content > ul > li > a,
+section.content > ol > li > a {
+    color: #f47e00;
+    transition: color 0.2s ease-in;
+    text-decoration: none;
+}
+
+section.content > p > a:hover,
+section.content > ul > li > a:hover,
+section.content > ol > li > a:hover {
+    color: #333;
+}
+
+section.content > blockquote {
+    position: relative;
+    margin: 50px 0;
+    font-weight: bold;
+    border-top: 1px dashed #cacaca;
+    display: block;
+    border-bottom: 1px dashed #cacaca;
+    padding: 8px 65px;
+    text-align: center;
+    line-height: 1.6em;
+    font-size: 1.1em;
+    border-left: none;
+    border-right: none; 
+}
+
+section.content > blockquote::before {
+    content: "\201C";
+    position: absolute;
+    left: 0;
+    top: 24px;
+    font-size: 75px;
+    color: #EDEDED;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-style: initial;
+
+}
+
+section.content > p > a > img {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border: 0;
+    width: 300px;
+    aspect-ratio: auto 300 / 132;
+}
