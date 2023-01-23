@@ -1,17 +1,17 @@
 export default class Post {
 
     static async get(path) {
-        const response = await fetch(`http://localhost:8080/reactor/resources${path}`);
+        const response = await fetch(`http://localhost:8080/render/api${path}`);
         this.handleResponse(response, 'post-loaded-event');
     }    
 
     static async lastPosts() {
-        const response = await fetch(`http://localhost:8080/reactor/resources/last?lang=ru&type=POST&limit=10`);
+        const response = await fetch(`http://localhost:8080/render/api/last?lang=ru&type=POST&limit=10`);
         this.handleResponse(response, 'last-loaded-event');
     }
 
     static async lastArticles() {
-        const response = await fetch(`http://localhost:8080/reactor/resources/last?type=LAST_ARTICLES&limit=10`);
+        const response = await fetch(`http://localhost:8080/render/api/last?type=LAST_ARTICLES&limit=10`);
         this.handleResponse(response, 'last-articles-loaded-event');
     }
 
