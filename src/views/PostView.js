@@ -28,6 +28,7 @@ export default class PostView extends HTMLElement {
         <link rel="stylesheet" type="text/css" href="/styles/style-post-control.css">
         ${detail}
         `;
+        window.scrollTo(0,0);
     }
 }
 
