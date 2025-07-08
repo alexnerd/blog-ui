@@ -16,7 +16,7 @@ export default class NavView extends HTMLElement {
             <link rel="stylesheet" type="text/css" href="/styles/style-nav.css">
             <h4>Рубрики</h4>
             <ul>
-                <li><a href="/blog">Блог</a></li>
+                <li><a href="/">Блог</a></li>
                 <li><a href="/about">О проекте</a></li>
                 <li><a href="/contacts">Контакты</a></li>
             </ul>
