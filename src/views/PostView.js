@@ -9,6 +9,9 @@ export default class PostView extends HTMLElement {
     connectedCallback() { 
         this.root.innerHTML = this.createView();
         document.addEventListener('post-loaded-event', e => this.onPostLoaded(e));
+        let element = document.querySelector('title');
+        element.title = '';
+        element.setAttribute('rt', 'fake');
         Post.get(this.path);
     }
 
@@ -22,12 +25,15 @@ export default class PostView extends HTMLElement {
     }
 
     onPostLoaded({ detail }) {
-        console.log('post -> ', detail);
         this.root.innerHTML = `
         <link rel="stylesheet" type="text/css" href="/styles/style-post.css">
         <link rel="stylesheet" type="text/css" href="/styles/style-post-control.css">
         ${detail}
         `;
+
+        let htmlHeadingElement = this.root.querySelector('h2');
+        document.title = htmlHeadingElement.innerText;
+
         window.scrollTo(0,0);
     }
 }
