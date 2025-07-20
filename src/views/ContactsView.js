@@ -4,7 +4,8 @@ export default class ContactsView extends HTMLElement {
         super();
         this.root = this.attachShadow({mode: 'open'});
     }
-    connectedCallback() { 
+    connectedCallback() {
+        document.title = 'JavaNerd - Контакты';
         this.root.innerHTML = this.createView();
     }
 

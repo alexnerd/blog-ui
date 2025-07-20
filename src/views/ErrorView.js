@@ -7,7 +7,8 @@ export default class ErrorView extends HTMLElement {
         this.message = message;
     }
 
-    connectedCallback() { 
+    connectedCallback() {
+        document.title = 'JavaNerd - Ошибка';
         this.root.innerHTML = this.createView();
     }
 

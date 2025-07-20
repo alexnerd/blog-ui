@@ -4,7 +4,8 @@ export default class AboutView extends HTMLElement {
         super();
         this.root = this.attachShadow({mode: 'open'});
     }
-    connectedCallback() { 
+    connectedCallback() {
+        document.title = 'JavaNerd - О проекте';
         this.root.innerHTML = this.createView();
     }
 

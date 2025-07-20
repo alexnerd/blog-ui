@@ -6,7 +6,8 @@ export default class BlogView extends HTMLElement {
         this.root = this.attachShadow({mode: 'open'});
     }
 
-    connectedCallback() { 
+    connectedCallback() {
+        document.title = 'JavaNerd - Блог о программировании на Java';
         this.root.innerHTML = this.createView();
         document.addEventListener('last-loaded-event', e => this.onPostLoaded(e));
         Post.lastPosts();
