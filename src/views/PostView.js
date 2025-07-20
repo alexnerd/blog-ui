@@ -9,9 +9,6 @@ export default class PostView extends HTMLElement {
     connectedCallback() { 
         this.root.innerHTML = this.createView();
         document.addEventListener('post-loaded-event', e => this.onPostLoaded(e));
-        let element = document.querySelector('title');
-        element.title = '';
-        element.setAttribute('rt', 'fake');
         Post.get(this.path);
     }
 
