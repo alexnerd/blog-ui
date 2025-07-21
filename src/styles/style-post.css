@@ -100,3 +100,18 @@ section.content > p > a > img {
     width: 300px;
     aspect-ratio: auto 300 / 132;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
