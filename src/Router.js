@@ -1,26 +1,32 @@
-export default class Router {    
-
+// Router handles client-side navigation and dispatches route events
+export default class Router {
+    // Handles link clicks and updates browser history
     static route = (event) => {
-        event = event || window.event;
+        if (!event) {
+            throw new Error('Event must be passed to Router.route');
+        }
         event.preventDefault();
-        event.target.href.includes(window.location.pathname)
-        if(window.location.pathname == '/' 
-            || !event.target.href.includes(window.location.pathname)) {
-            window.history.pushState({}, "", event.target.href);
+        const href = event.target.href;
+
+        // Only push state if navigating to a different path
+        if (href && href !== window.location.href) {
+            window.history.pushState({}, '', href);
             this.handleLocation();
-        } 
+        }
     };
 
-    static handleLocation = async () => {
-        const path = window.location.pathname.split("/")
-                                             .filter(function(e) { return e !== '' })
-                                             .shift() || "";
+    // Dispatches a custom event with the current route info
+    static handleLocation = () => {
+        const path = window.location.pathname
+            .split('/')
+            .filter(Boolean)
+            .shift() || '';
         const event = new CustomEvent('route-nav', {
             detail: {
                 component: path,
                 path: window.location.pathname,
-                search: window.location.search
-            }
+                search: window.location.search,
+            },
         });
         document.dispatchEvent(event);
     };
