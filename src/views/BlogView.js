@@ -8,6 +8,7 @@ export default class BlogView extends HTMLElement {
 
     connectedCallback() {
         document.title = 'JavaNerd - Блог о программировании на Java';
+        document.querySelector('meta[name="description"]').setAttribute("content", "Блог о программировании на Java: практические руeководства, примеры кода, советы по Spring, Hibernate, многопоточности и лучшим практикам разработки.");
         this.root.innerHTML = this.createView();
         document.addEventListener('last-loaded-event', e => this.onPostLoaded(e));
         Post.lastPosts();

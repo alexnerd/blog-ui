@@ -9,6 +9,7 @@ export default class ErrorView extends HTMLElement {
 
     connectedCallback() {
         document.title = 'JavaNerd - Ошибка';
+        document.querySelector('meta[name="description"]').setAttribute("content", "Ошибка в работе сайта");
         this.root.innerHTML = this.createView();
     }
 

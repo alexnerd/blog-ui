@@ -6,6 +6,7 @@ export default class AboutView extends HTMLElement {
     }
     connectedCallback() {
         document.title = 'JavaNerd - О проекте';
+        document.querySelector('meta[name="description"]').setAttribute("content", "О Java Nerd — блог о Java, Spring, архитектуре, чистом коде и лучших практиках разработки. Узнайте больше об авторе и миссии проекта.");
         this.root.innerHTML = this.createView();
     }
 

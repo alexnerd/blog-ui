@@ -28,9 +28,12 @@ export default class PostView extends HTMLElement {
         ${detail}
         `;
 
-        let htmlHeadingElement = this.root.querySelector('h2');
-        document.title = htmlHeadingElement.innerText;
-
+        let postHead = this.root.getElementById('post-head-title');
+        document.title = postHead.innerText;
+        let postDescription = this.root.getElementById('post-head-description');
+        postDescription.getAttribute('content');
+        document.querySelector('meta[name="description"]').setAttribute("content", postDescription.getAttribute('content'));
+        postDescription.remove();
         window.scrollTo(0,0);
     }
 }

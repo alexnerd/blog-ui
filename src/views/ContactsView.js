@@ -6,6 +6,7 @@ export default class ContactsView extends HTMLElement {
     }
     connectedCallback() {
         document.title = 'JavaNerd - Контакты';
+        document.querySelector('meta[name="description"]').setAttribute("content", "Свяжитесь с автором Java Nerd — отправьте сообщение, предложение или вопрос по Java, Spring и другим темам разработки или по вопросам работы сайта.");
         this.root.innerHTML = this.createView();
     }
 
