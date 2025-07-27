@@ -101,6 +101,16 @@ section.content > p > a > img {
     aspect-ratio: auto 300 / 132;
 }
 
+section.content > pre {
+    background: #eee;
+    padding: 1em;
+    overflow-x: auto;
+}
+
+section.content > hr {
+    margin: 2rem 0;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
