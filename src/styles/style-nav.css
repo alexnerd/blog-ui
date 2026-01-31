@@ -1,6 +1,10 @@
+:host {
+    font-family: var(--font-body);
+}
+
 a {
     text-decoration: none;
-    font-family: 'Lora', serif;
+    font-family: var(--font-body);
     font-size: 14px;
     color: #666;
     transition: color 0.2s ease-in;
@@ -18,7 +22,10 @@ h4 {
     margin-top: -4px;
     margin-bottom: 19px;
     font-size: 19px;
-    font-family: 'Rokkitt', serif;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
     color: #000;
 }
 

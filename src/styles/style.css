@@ -5,11 +5,31 @@
 @font-face { font-family: lora; 
     src: url('../fonts/Lora-VariableFont_wght.ttf'); }     
 
+:root {
+    --font-heading: "Roboto Slab", ui-serif, Georgia, "Times New Roman", serif;
+    --font-body: "Lora", serif;
+}
+
+html {
+    font-synthesis: none;
+}
+
 body {
     margin-left: 10%;
     margin-right: 10%;
     padding: 0px;
     word-break: break-word;
+}
+
+h1,
+h2,
+h3,
+.title,
+.post-header {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
 }
 
 main {

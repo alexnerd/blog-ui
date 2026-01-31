@@ -1,17 +1,17 @@
 export default class Post {
 
     static async get(path) {
-        const response = await fetch(`http://localhost:8080/render/api${path}`);
+        const response = await fetch(`https://javanerd.ru/blog${path}`);
         this.handleResponse(response, 'post-loaded-event');
     }    
 
     static async lastPosts() {
-        const response = await fetch(`http://localhost:8080/render/api/last?lang=RU&type=ARTICLE_TEASER&limit=10`);
+        const response = await fetch(`https://javanerd.ru/blog/last?lang=RU&type=ARTICLE_TEASER&limit=10`);
         this.handleResponse(response, 'last-loaded-event');
     }
 
     static async lastArticles() {
-        const response = await fetch(`http://localhost:8080/render/api/last?lang=RU&type=LAST_ARTICLES&limit=10`);
+        const response = await fetch(`https://javanerd.ru/blog/last?lang=RU&type=LAST_ARTICLES&limit=10`);
         this.handleResponse(response, 'last-articles-loaded-event');
     }
 

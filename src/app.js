@@ -7,7 +7,10 @@ import NavView from '/NavView.js';
 
 
 navigator.serviceWorker.register('/CacheWorker.js')
-    .then(registration => console.log('registration succeded', registration))
+    .then(registration => {
+        console.log('registration succeded', registration);
+        registration.update();
+    })
     .catch(error => console.error('registration failed', error));
 
 window.onpopstate = Router.handleLocation;

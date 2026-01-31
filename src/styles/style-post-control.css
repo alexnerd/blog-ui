@@ -1,3 +1,7 @@
+:host {
+    font-family: var(--font-body);
+}
+
 section.post-control {
     margin-top: 40px;
 }
@@ -8,7 +12,7 @@ section.control-read-more {
 }
 
 a.read-more-link {
-    font-family: 'Lora', serif;
+    font-family: var(--font-body);
     font-size: 16px;
     color: #333;
     text-decoration: none;
