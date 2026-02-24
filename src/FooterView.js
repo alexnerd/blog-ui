@@ -17,22 +17,7 @@ export default class FooterView extends HTMLElement {
                 </a>
             </li>
             <li>
-                <a href="https://www.youtube.com/channel/UCabPQ7vbNQjpvUZx5AZoDBw">
-                    <img alt="YouTube" src="/logo/youtube-logo-16px.png">
-                </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/JavaNerdRu">
-                    <img alt="GitHub" src="/logo/twitter-logo-16px.png">
-                </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/java_nerd/">
-                    <img alt="Instagram" src="/logo/instagram-logo-16px.png">
-                </a>
-            </li>
-            <li>
-                <small>copyright alexnerd.com ${this.currentYear}</small>
+                <small>copyright Popov Aleksey ${this.currentYear}</small>
             </li>
         </ul>
         `;
